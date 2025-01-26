@@ -1,11 +1,12 @@
 import './Machine.css'
 
 function Machine(props: {fruit1: string, fruit2: string, fruit3: string}) {
-    const win: boolean = props.fruit1 === props.fruit2 && props.fruit2 === props.fruit3;
+    const {fruit1, fruit2, fruit3} = props;
+    const win: boolean = fruit1 === fruit2 && fruit2 === fruit3;
     const result: string = win ? "Winner!" : "Loser!";
     return (
         <div className="display">
-            <p>{props.fruit1} {props.fruit2} {props.fruit3}</p>
+            <p>{fruit1} {fruit2} {fruit3}</p>
             <p>{result}</p>
         </div>
     )
